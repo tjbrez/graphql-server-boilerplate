@@ -1,7 +1,7 @@
 import graphene
 from graphene import relay
 from graphene_sqlalchemy import SQLAlchemyConnectionField, SQLAlchemyObjectType
-from models import Member as UserModel
+from models import User as UserModel
 
 
 class User(SQLAlchemyObjectType):
@@ -12,7 +12,7 @@ class User(SQLAlchemyObjectType):
 
 class Query(graphene.ObjectType):
     node = relay.Node.Field()
-    all_members = SQLAlchemyConnectionField(User)
+    all_users = SQLAlchemyConnectionField(User)
     user = graphene.Field(User)
 
 
