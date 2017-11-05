@@ -1,0 +1,2 @@
+DEBUG=True
+DATABASE_URL=postgres://appname:1234@localhost:5432/dbname
